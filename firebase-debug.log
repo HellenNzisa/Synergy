@@ -1,0 +1,326 @@
+[debug] [2024-05-01T08:26:42.238Z] ----------------------------------------------------------------------
+[debug] [2024-05-01T08:26:42.242Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hmute\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-05-01T08:26:42.243Z] CLI Version:   13.7.5
+[debug] [2024-05-01T08:26:42.243Z] Platform:      win32
+[debug] [2024-05-01T08:26:42.244Z] Node Version:  v21.6.1
+[debug] [2024-05-01T08:26:42.244Z] Time:          Wed May 01 2024 11:26:42 GMT+0300 (East Africa Time)
+[debug] [2024-05-01T08:26:42.244Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-01T08:26:42.382Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-01T08:26:42.384Z] > authorizing via signed-in user (hmutemi74@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\hmute\OneDrive\Documents\Mobiledevelopment\synergy
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-05-01T08:26:56.611Z] Using project from CLI flag: synergy-syn2024
+[debug] [2024-05-01T08:26:56.614Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/synergy-syn2024 [none]
+[debug] [2024-05-01T08:26:58.682Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/synergy-syn2024 200
+[debug] [2024-05-01T08:26:58.683Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/synergy-syn2024 {"projectId":"synergy-syn2024","projectNumber":"743705313629","displayName":"SYNERGY","name":"projects/synergy-syn2024","resources":{"hostingSite":"synergy-syn2024","realtimeDatabaseInstance":"synergy-syn2024-default-rtdb"},"state":"ACTIVE","etag":"1_0fead644-733d-47fa-88d2-952987894a32"}
+[info] i  Using project synergy-syn2024 (SYNERGY) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-05-01T08:26:58.713Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-05-01T08:26:58.713Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/synergy-syn2024
+[debug] [2024-05-01T08:27:01.469Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/firebasedatabase.googleapis.com 200
+[debug] [2024-05-01T08:27:01.469Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-05-01T08:27:01.479Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/synergy-syn2024/locations/-/instances/synergy-syn2024-default-rtdb [none]
+[debug] [2024-05-01T08:27:04.389Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/synergy-syn2024/locations/-/instances/synergy-syn2024-default-rtdb 200
+[debug] [2024-05-01T08:27:04.389Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/synergy-syn2024/locations/-/instances/synergy-syn2024-default-rtdb {"name":"projects/743705313629/locations/us-central1/instances/synergy-syn2024-default-rtdb","project":"projects/743705313629","databaseUrl":"https://synergy-syn2024-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-05-01T08:27:14.085Z] >>> [apiv2][query] GET https://synergy-syn2024-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2024-05-01T08:27:16.062Z] <<< [apiv2][status] GET https://synergy-syn2024-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-05-01T08:27:16.063Z] <<< [apiv2][body] GET https://synergy-syn2024-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for synergy-syn2024-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2024-05-01T08:27:16.093Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/firestore.googleapis.com [none]
+[debug] [2024-05-01T08:27:16.093Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/firestore.googleapis.com x-goog-quota-user=projects/synergy-syn2024
+[debug] [2024-05-01T08:27:19.219Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/firestore.googleapis.com 200
+[debug] [2024-05-01T08:27:19.219Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/firestore.googleapis.com [omitted]
+[debug] [2024-05-01T08:27:19.220Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/synergy-syn2024/databases/(default) [none]
+[debug] [2024-05-01T08:27:22.511Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/synergy-syn2024/databases/(default) 200
+[debug] [2024-05-01T08:27:22.511Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/synergy-syn2024/databases/(default) {"name":"projects/synergy-syn2024/databases/(default)","uid":"50c74e82-3a5a-481a-9c51-504ed2f565c1","createTime":"2024-05-01T08:26:05.584503Z","updateTime":"2024-05-01T08:26:05.584503Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-05-01T08:26:05.584503Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IOTM9YqE7IUDMPeY7uaD7IUD"}
+[debug] [2024-05-01T08:27:22.512Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-05-01T08:27:22.513Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-01T08:27:22.513Z] > authorizing via signed-in user (hmutemi74@gmail.com)
+[debug] [2024-05-01T08:27:22.514Z] [iam] checking project synergy-syn2024 for permissions ["firebase.projects.get"]
+[debug] [2024-05-01T08:27:22.515Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:testIamPermissions [none]
+[debug] [2024-05-01T08:27:22.515Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:testIamPermissions x-goog-quota-user=projects/synergy-syn2024
+[debug] [2024-05-01T08:27:22.516Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-05-01T08:27:25.249Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:testIamPermissions 200
+[debug] [2024-05-01T08:27:25.250Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-05-01T08:27:30.808Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/synergy-syn2024/releases pageSize=10&pageToken=
+[debug] [2024-05-01T08:27:33.165Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/synergy-syn2024/releases 200
+[debug] [2024-05-01T08:27:33.165Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/synergy-syn2024/releases {"releases":[{"name":"projects/synergy-syn2024/releases/cloud.firestore","rulesetName":"projects/synergy-syn2024/rulesets/a057859f-a8fa-4238-904f-39a50b4e4e70","createTime":"2024-05-01T08:26:15.213621Z","updateTime":"2024-05-01T08:26:15.213621Z"}]}
+[debug] [2024-05-01T08:27:33.166Z] Found ruleset: projects/synergy-syn2024/rulesets/a057859f-a8fa-4238-904f-39a50b4e4e70
+[debug] [2024-05-01T08:27:33.167Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/synergy-syn2024/rulesets/a057859f-a8fa-4238-904f-39a50b4e4e70 [none]
+[debug] [2024-05-01T08:27:33.640Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/synergy-syn2024/rulesets/a057859f-a8fa-4238-904f-39a50b4e4e70 200
+[debug] [2024-05-01T08:27:33.641Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/synergy-syn2024/rulesets/a057859f-a8fa-4238-904f-39a50b4e4e70 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-05-01T08:27:36.478Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/synergy-syn2024/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-05-01T08:27:36.483Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/synergy-syn2024/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-05-01T08:27:39.251Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/synergy-syn2024/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-05-01T08:27:39.251Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/synergy-syn2024/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-05-01T08:27:39.720Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/synergy-syn2024/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-05-01T08:27:39.721Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/synergy-syn2024/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/synergy-syn2024/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2024-05-01T08:27:39.731Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-01T08:27:39.731Z] > authorizing via signed-in user (hmutemi74@gmail.com)
+[debug] [2024-05-01T08:27:39.732Z] [iam] checking project synergy-syn2024 for permissions ["firebase.projects.get"]
+[debug] [2024-05-01T08:27:39.733Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:testIamPermissions [none]
+[debug] [2024-05-01T08:27:39.733Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:testIamPermissions x-goog-quota-user=projects/synergy-syn2024
+[debug] [2024-05-01T08:27:39.733Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-05-01T08:27:43.099Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:testIamPermissions 200
+[debug] [2024-05-01T08:27:43.099Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-05-01T08:27:43.100Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-05-01T08:27:43.100Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/synergy-syn2024
+[debug] [2024-05-01T08:27:43.107Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-05-01T08:27:43.107Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/synergy-syn2024
+[debug] [2024-05-01T08:27:45.288Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/runtimeconfig.googleapis.com 200
+[debug] [2024-05-01T08:27:45.288Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-05-01T08:27:45.290Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com 200
+[debug] [2024-05-01T08:27:45.291Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-05-01T08:27:45.292Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2024-05-01T08:27:45.292Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/synergy-syn2024
+[debug] [2024-05-01T08:27:46.535Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2024-05-01T08:27:46.536Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2024-05-01T08:27:56.552Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-05-01T08:27:56.552Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/synergy-syn2024
+[debug] [2024-05-01T08:27:59.921Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com 200
+[debug] [2024-05-01T08:27:59.922Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/synergy-syn2024/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/index.js 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-05-01T08:30:54.289Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/synergy-syn2024 [none]
+[debug] [2024-05-01T08:30:55.315Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/synergy-syn2024 200
+[debug] [2024-05-01T08:30:55.316Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/synergy-syn2024 {"projectId":"synergy-syn2024","projectNumber":"743705313629","displayName":"SYNERGY","name":"projects/synergy-syn2024","resources":{"hostingSite":"synergy-syn2024","realtimeDatabaseInstance":"synergy-syn2024-default-rtdb"},"state":"ACTIVE","etag":"1_0fead644-733d-47fa-88d2-952987894a32"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-05-01T08:31:19.333Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-05-01T08:31:21.277Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-05-01T08:31:21.277Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.11.1","browserURL":"https://www.gstatic.com/firebasejs/10.11.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.11.1/firebase.tgz"},"live":{"version":"10.11","browserURL":"https://www.gstatic.com/firebasejs/live/10.11/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.11/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.11.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.11.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.11.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.11.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.11.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.11.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.11.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.11.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.11.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.11.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\hmute\OneDrive\Documents\Mobiledevelopment\synergy 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=14160080&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-05-01T08:31:58.175Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-05-01T08:31:58.175Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-05-01T08:32:01.196Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-05-01T08:32:01.197Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-05-01T08:32:01.227Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-05-01T08:32:02.992Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-05-01T08:32:02.993Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"HellenNzisa","id":159112978,"node_id":"U_kgDOCXvfEg","avatar_url":"https://avatars.githubusercontent.com/u/159112978?v=4","gravatar_id":"","url":"https://api.github.com/users/HellenNzisa","html_url":"https://github.com/HellenNzisa","followers_url":"https://api.github.com/users/HellenNzisa/followers","following_url":"https://api.github.com/users/HellenNzisa/following{/other_user}","gists_url":"https://api.github.com/users/HellenNzisa/gists{/gist_id}","starred_url":"https://api.github.com/users/HellenNzisa/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/HellenNzisa/subscriptions","organizations_url":"https://api.github.com/users/HellenNzisa/orgs","repos_url":"https://api.github.com/users/HellenNzisa/repos","events_url":"https://api.github.com/users/HellenNzisa/events{/privacy}","received_events_url":"https://api.github.com/users/HellenNzisa/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":5,"public_gists":0,"followers":0,"following":0,"created_at":"2024-02-06T07:01:22Z","updated_at":"2024-05-01T08:31:48Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":5175,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as HellenNzisa 
+[info] 
+[debug] [2024-05-01T08:32:12.135Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-05-01T08:32:13.258Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-05-01T08:32:13.258Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-05-01T08:33:14.234Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-05-01T08:33:14.867Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-05-01T08:33:14.868Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-05-01T08:33:19.182Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-05-01T08:33:20.192Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-05-01T08:33:20.193Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-05-01T08:33:24.499Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-05-01T08:33:25.112Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-05-01T08:33:25.112Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-05-01T08:37:20.238Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-05-01T08:37:21.931Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-05-01T08:37:21.932Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-05-01T08:38:35.483Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-05-01T08:38:36.516Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-05-01T08:38:36.516Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-05-01T08:38:46.183Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-05-01T08:38:46.733Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-05-01T08:38:46.972Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-05-01T08:38:47.966Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-05-01T08:38:47.966Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-05-01T08:38:48.458Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-05-01T08:38:48.458Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-05-01T08:38:48.490Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-05-01T08:38:48.490Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-05-02T05:23:38.262Z] >>> [apiv2][query] GET https://api.github.com/repos/n/actions/secrets/public-key type=owner
+[debug] [2024-05-02T05:23:38.972Z] <<< [apiv2][status] GET https://api.github.com/repos/n/actions/secrets/public-key 404
+[debug] [2024-05-02T05:23:38.972Z] <<< [apiv2][body] GET https://api.github.com/repos/n/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-05-02T05:32:35.568Z] >>> [apiv2][query] GET https://api.github.com/repos/HellenNzisa/synergy/actions/secrets/public-key type=owner
+[debug] [2024-05-02T05:32:36.986Z] <<< [apiv2][status] GET https://api.github.com/repos/HellenNzisa/synergy/actions/secrets/public-key 200
+[debug] [2024-05-02T05:32:36.987Z] <<< [apiv2][body] GET https://api.github.com/repos/HellenNzisa/synergy/actions/secrets/public-key {"key_id":"3380204578043523366","key":"+ac3tvKyMaSG+OmHC0a1eSy3e/cYkVfzyEGZyUNGygc="}
+[debug] [2024-05-02T05:32:37.198Z] >>> [apiv2][query] GET https://api.github.com/repos/HellenNzisa/synergy [none]
+[debug] [2024-05-02T05:32:38.274Z] <<< [apiv2][status] GET https://api.github.com/repos/HellenNzisa/synergy 200
+[debug] [2024-05-02T05:32:38.276Z] <<< [apiv2][body] GET https://api.github.com/repos/HellenNzisa/synergy {"id":794862949,"node_id":"R_kgDOL2ClZQ","name":"Synergy","full_name":"HellenNzisa/Synergy","private":false,"owner":{"login":"HellenNzisa","id":159112978,"node_id":"U_kgDOCXvfEg","avatar_url":"https://avatars.githubusercontent.com/u/159112978?v=4","gravatar_id":"","url":"https://api.github.com/users/HellenNzisa","html_url":"https://github.com/HellenNzisa","followers_url":"https://api.github.com/users/HellenNzisa/followers","following_url":"https://api.github.com/users/HellenNzisa/following{/other_user}","gists_url":"https://api.github.com/users/HellenNzisa/gists{/gist_id}","starred_url":"https://api.github.com/users/HellenNzisa/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/HellenNzisa/subscriptions","organizations_url":"https://api.github.com/users/HellenNzisa/orgs","repos_url":"https://api.github.com/users/HellenNzisa/repos","events_url":"https://api.github.com/users/HellenNzisa/events{/privacy}","received_events_url":"https://api.github.com/users/HellenNzisa/received_events","type":"User","site_admin":false},"html_url":"https://github.com/HellenNzisa/Synergy","description":"For Firebase","fork":false,"url":"https://api.github.com/repos/HellenNzisa/Synergy","forks_url":"https://api.github.com/repos/HellenNzisa/Synergy/forks","keys_url":"https://api.github.com/repos/HellenNzisa/Synergy/keys{/key_id}","collaborators_url":"https://api.github.com/repos/HellenNzisa/Synergy/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/HellenNzisa/Synergy/teams","hooks_url":"https://api.github.com/repos/HellenNzisa/Synergy/hooks","issue_events_url":"https://api.github.com/repos/HellenNzisa/Synergy/issues/events{/number}","events_url":"https://api.github.com/repos/HellenNzisa/Synergy/events","assignees_url":"https://api.github.com/repos/HellenNzisa/Synergy/assignees{/user}","branches_url":"https://api.github.com/repos/HellenNzisa/Synergy/branches{/branch}","tags_url":"https://api.github.com/repos/HellenNzisa/Synergy/tags","blobs_url":"https://api.github.com/repos/HellenNzisa/Synergy/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/HellenNzisa/Synergy/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/HellenNzisa/Synergy/git/refs{/sha}","trees_url":"https://api.github.com/repos/HellenNzisa/Synergy/git/trees{/sha}","statuses_url":"https://api.github.com/repos/HellenNzisa/Synergy/statuses/{sha}","languages_url":"https://api.github.com/repos/HellenNzisa/Synergy/languages","stargazers_url":"https://api.github.com/repos/HellenNzisa/Synergy/stargazers","contributors_url":"https://api.github.com/repos/HellenNzisa/Synergy/contributors","subscribers_url":"https://api.github.com/repos/HellenNzisa/Synergy/subscribers","subscription_url":"https://api.github.com/repos/HellenNzisa/Synergy/subscription","commits_url":"https://api.github.com/repos/HellenNzisa/Synergy/commits{/sha}","git_commits_url":"https://api.github.com/repos/HellenNzisa/Synergy/git/commits{/sha}","comments_url":"https://api.github.com/repos/HellenNzisa/Synergy/comments{/number}","issue_comment_url":"https://api.github.com/repos/HellenNzisa/Synergy/issues/comments{/number}","contents_url":"https://api.github.com/repos/HellenNzisa/Synergy/contents/{+path}","compare_url":"https://api.github.com/repos/HellenNzisa/Synergy/compare/{base}...{head}","merges_url":"https://api.github.com/repos/HellenNzisa/Synergy/merges","archive_url":"https://api.github.com/repos/HellenNzisa/Synergy/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/HellenNzisa/Synergy/downloads","issues_url":"https://api.github.com/repos/HellenNzisa/Synergy/issues{/number}","pulls_url":"https://api.github.com/repos/HellenNzisa/Synergy/pulls{/number}","milestones_url":"https://api.github.com/repos/HellenNzisa/Synergy/milestones{/number}","notifications_url":"https://api.github.com/repos/HellenNzisa/Synergy/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/HellenNzisa/Synergy/labels{/name}","releases_url":"https://api.github.com/repos/HellenNzisa/Synergy/releases{/id}","deployments_url":"https://api.github.com/repos/HellenNzisa/Synergy/deployments","created_at":"2024-05-02T05:31:58Z","updated_at":"2024-05-02T05:32:02Z","pushed_at":"2024-05-02T05:31:59Z","git_url":"git://github.com/HellenNzisa/Synergy.git","ssh_url":"git@github.com:HellenNzisa/Synergy.git","clone_url":"https://github.com/HellenNzisa/Synergy.git","svn_url":"https://github.com/HellenNzisa/Synergy","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","security_and_analysis":{"secret_scanning":{"status":"enabled"},"secret_scanning_push_protection":{"status":"enabled"},"dependabot_security_updates":{"status":"disabled"},"secret_scanning_validity_checks":{"status":"disabled"}},"network_count":0,"subscribers_count":1}
+[debug] [2024-05-02T05:32:38.598Z] > refreshing access token with scopes: []
+[debug] [2024-05-02T05:32:38.696Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-05-02T05:32:38.697Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-02T05:32:40.088Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-05-02T05:32:40.089Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-02T05:32:40.380Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts [none]
+[debug] [2024-05-02T05:32:40.412Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts {"accountId":"github-action-794862949","serviceAccount":{"displayName":"GitHub Actions (HellenNzisa/synergy)","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository HellenNzisa/synergy"}}
+[debug] [2024-05-02T05:32:44.424Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts 200
+[debug] [2024-05-02T05:32:44.424Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts [omitted]
+[debug] [2024-05-02T05:32:44.460Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts/github-action-794862949@synergy-syn2024.iam.gserviceaccount.com [none]
+[debug] [2024-05-02T05:32:44.461Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:getIamPolicy [none]
+[debug] [2024-05-02T05:32:45.064Z] <<< [apiv2][status] GET https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts/github-action-794862949@synergy-syn2024.iam.gserviceaccount.com 200
+[debug] [2024-05-02T05:32:45.064Z] <<< [apiv2][body] GET https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts/github-action-794862949@synergy-syn2024.iam.gserviceaccount.com {"name":"projects/synergy-syn2024/serviceAccounts/github-action-794862949@synergy-syn2024.iam.gserviceaccount.com","projectId":"synergy-syn2024","uniqueId":"106168593875970658995","email":"github-action-794862949@synergy-syn2024.iam.gserviceaccount.com","displayName":"GitHub Actions (HellenNzisa/synergy)","etag":"MDEwMjE5MjA=","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository HellenNzisa/synergy","oauth2ClientId":"106168593875970658995"}
+[debug] [2024-05-02T05:32:48.217Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:getIamPolicy 200
+[debug] [2024-05-02T05:32:48.217Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:getIamPolicy {"version":1,"etag":"BwYXYEL/DYs=","bindings":[{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-743705313629@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:synergy-syn2024@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-743705313629@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-aw5wj@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-743705313629@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-743705313629@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-aw5wj@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:hmutemi74@gmail.com"]}]}
+[debug] [2024-05-02T05:32:48.286Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:setIamPolicy [none]
+[debug] [2024-05-02T05:32:48.286Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:setIamPolicy {"policy":{"version":1,"etag":"BwYXYEL/DYs=","bindings":[{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-743705313629@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:synergy-syn2024@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-743705313629@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-aw5wj@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-743705313629@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-743705313629@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-aw5wj@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:hmutemi74@gmail.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2024-05-02T05:32:49.586Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:setIamPolicy 200
+[debug] [2024-05-02T05:32:49.586Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergy-syn2024:setIamPolicy {"version":1,"etag":"BwYXce78emk=","bindings":[{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-743705313629@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:synergy-syn2024@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-743705313629@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-aw5wj@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-743705313629@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-743705313629@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-aw5wj@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:hmutemi74@gmail.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-794862949@synergy-syn2024.iam.gserviceaccount.com"]}]}
+[debug] [2024-05-02T05:32:49.587Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts/github-action-794862949@synergy-syn2024.iam.gserviceaccount.com/keys [none]
+[debug] [2024-05-02T05:32:49.588Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts/github-action-794862949@synergy-syn2024.iam.gserviceaccount.com/keys {"keyAlgorithm":"KEY_ALG_UNSPECIFIED","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE"}
+[debug] [2024-05-02T05:32:50.248Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts/github-action-794862949@synergy-syn2024.iam.gserviceaccount.com/keys 200
+[debug] [2024-05-02T05:32:50.249Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/synergy-syn2024/serviceAccounts/github-action-794862949@synergy-syn2024.iam.gserviceaccount.com/keys {"name":"projects/synergy-syn2024/serviceAccounts/github-action-794862949@synergy-syn2024.iam.gserviceaccount.com/keys/5557638ac153ad46d6ad8201e010833688677216","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE","privateKeyData":"ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAic3luZXJneS1zeW4yMDI0IiwKICAicHJpdmF0ZV9rZXlfaWQiOiAiNTU1NzYzOGFjMTUzYWQ0NmQ2YWQ4MjAxZTAxMDgzMzY4ODY3NzIxNiIsCiAgInByaXZhdGVfa2V5IjogIi0tLS0tQkVHSU4gUFJJVkFURSBLRVktLS0tLVxuTUlJRXZRSUJBREFOQmdrcWhraUc5dzBCQVFFRkFBU0NCS2N3Z2dTakFnRUFBb0lCQVFEQXVjdDBLQnZSUWp5WlxuUXZveDJKL3hNNmc2ZExnL29CemF0S29xM1pjZkpZcnlwU2FwZ0pqMUhjZ0hPTmIySXhVSGhCZnhNWlgyS1lwUFxuUFdsTXQxU2pSNDNwb2szaERwUUpFSEJITzdTRWpsY3BMalFGd3JMcndpc2oyTWVYZVhKdFlneGRpcFg1TGVFYVxuWlpmTWVXeklRYTloeDRQQ2lIS1l2RGkzSFVYbGY2WVRKczBDWlpTbFYxbXB1M0Z6ZFVDdkFpeGJOY3VTL2E1blxuaVNHZ0IxS1JsV0ZZTndGRmtEeDgzN1hBa0lod3JCbUcveWxpcVlDSEIzaUtRZ0c5alVSTlV6QnFEaFlTY2J1RlxuQzJwWVdkT1BOOTdkeVkraFZzZHRpdnBMRnIrdUEzUldtMVR1K3NTTVhHdTV6cVB2VzgxL2JLQjNaK3dhOVVsMFxuZlJjZXF6dHhBZ01CQUFFQ2dnRUFDelFwMnBOejFZa01HSTFMR2U5NTBkWHkwVTRrZ1dkamtnZkhialZDVWloV1xuc09jdXJaTXBJVFBGWTMwWGl3ak1VY3JwTU9kMDdESHJSVkxBdnJuWUtPTlJvY3ZDaXdNejBpaVRYR0xCU21UelxuZG5TR0IvRXpBVTlnL21VZGFrWUFROUZidm1yZWI5Vk4xU0RqajVxZCt6RE5XeW56OUJER1Y3QjJmQmV1cnVvUVxuTU5ZT2UvYXYxMEJiYkRxdzVJUXNvQ3lPcVdEV1E4SjlzcHM2L0tzS0NIZDl0b1pBMkJ0RWZIM1dDODF4VDdOQlxuc1V5K2EwWEpGYlhQckZ1U08rVWZKVllQdlM5N2RnY3k1bnlET3F4a0xzM1F2Qmt1OEhNS2tZTzJpbjIyQ293NVxuNk9PRUh3QS9JUWovQk1nYXlVY1k5bU0wdytaU3lpWE82TzdGc2xYUFFRS0JnUUQzdnp2VVV0d0dtbThUOEZmTlxuOEEyeWpCZVF4a2I5eW5NMUVKc1JqdGJzOGFLYnZVNmE1alU1dlNZcU1QbGc4TEJCS0h0UkNhNjZMR1B2UFYwQlxuVUM4M1Qyc0YrQnJoVi8waFdDd2ZHVU82eHZFM1Y0MXBiTkF0bmo1alVVKytYaWs5UWJPdjJ4MVZCUU5YeFR0b1xudnF1dmZSazRneStyaDBqdmZiSmtodE5nWVFLQmdRREhKVmdsOHFDU3p5SXVoUXZHVGtaZ2pCUkpqeXZLRnZCY1xuQlF6N2dSY1Z3WlBEdXlWMFRLYTloWnNOcmtndmZxcyt1ZzNXakkzTHllUy9VanlmNTlSVGJqbGw1MGZlWkZwSVxuckczQmFUbThhVXcwSkQ4blZJVU4zZFBseFp3UTdPeld6M2NOZENFR0hjVUp1U2FWS1lYWU5tZ08wcHZGTmdIRVxuaG82MzdZWDFFUUtCZ0hjb1dqMWY4UVdZQjY3ZVhVem1sWi8zczJubGc4V1ROdUFoOFlON1lUSXJjaHRYN05PaFxudjUzYXROMThHcVdlZmhlSXdlOFRLaC9QTSsyZ1pQZzV1Y3Z2ZmJrc1FMbDdtWHNOTG9OeW9sbldUN1JmZnR0alxuQTZtOVA2S0RQRWlDZjNGQUJZMmlaTFE4cWdQd0VBZnNGU1ZkbE9EU2IvNGZIbHhaNTVCa0xJeGhBb0dBSFdiNlxuR01BMXpQY2dDTlpENHNkenhKVnArV0pXQ01SU1FJUE9ZdU93VU5uL3d3cENnV1UveVFPTTNQdzZWQ2pUaDdOWVxuajdDNHpybkVPQ3NnSUV2T0lYTklyaTd6Z1hZM2pqdEhDU05NRHZGTSt2WFBEVE9CWVlhNjNsWEtzUVVLQXIwbVxueXFtMnBueUd0dVRMT1lLajdFUThJTlFmZzRKeHlGNUZmQXBwbU1FQ2dZRUF5YjcxQlU2bi9INndLdkR4a0VHd1xuQUowVGV6YWhPdTJvSGxNVjdxWEZocmxaZUlpWStDV2VVN2gzTlFlQi9OcDBwMXh6S2JYWHdENE1zUkE3WXdNQlxuMUZRbTNJSXdXWGNUT1lRT3pmdUtnUlpNRC8yTGl1MVR0bHA1T2lmeURmT1FzNVpDeEdiQXhxbEJjUWg4TFEzZVxuZld6NGljTkFjZDI1eGxkcHdsNmVPeXc9XG4tLS0tLUVORCBQUklWQVRFIEtFWS0tLS0tXG4iLAogICJjbGllbnRfZW1haWwiOiAiZ2l0aHViLWFjdGlvbi03OTQ4NjI5NDlAc3luZXJneS1zeW4yMDI0LmlhbS5nc2VydmljZWFjY291bnQuY29tIiwKICAiY2xpZW50X2lkIjogIjEwNjE2ODU5Mzg3NTk3MDY1ODk5NSIsCiAgImF1dGhfdXJpIjogImh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi9hdXRoIiwKICAidG9rZW5fdXJpIjogImh0dHBzOi8vb2F1dGgyLmdvb2dsZWFwaXMuY29tL3Rva2VuIiwKICAiYXV0aF9wcm92aWRlcl94NTA5X2NlcnRfdXJsIjogImh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92MS9jZXJ0cyIsCiAgImNsaWVudF94NTA5X2NlcnRfdXJsIjogImh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL3JvYm90L3YxL21ldGFkYXRhL3g1MDkvZ2l0aHViLWFjdGlvbi03OTQ4NjI5NDklNDBzeW5lcmd5LXN5bjIwMjQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLAogICJ1bml2ZXJzZV9kb21haW4iOiAiZ29vZ2xlYXBpcy5jb20iCn0K","validAfterTime":"2024-05-02T05:32:49Z","validBeforeTime":"9999-12-31T23:59:59Z","keyAlgorithm":"KEY_ALG_RSA_2048","keyOrigin":"GOOGLE_PROVIDED","keyType":"USER_MANAGED"}
+[info] 
+[info] +  Created service account github-action-794862949 with Firebase Hosting admin permissions. 
+[debug] [2024-05-02T05:32:50.421Z] >>> [apiv2][query] PUT https://api.github.com/repos/HellenNzisa/synergy/actions/secrets/FIREBASE_SERVICE_ACCOUNT_SYNERGY_SYN2024 [none]
+[debug] [2024-05-02T05:32:50.421Z] >>> [apiv2][body] PUT https://api.github.com/repos/HellenNzisa/synergy/actions/secrets/FIREBASE_SERVICE_ACCOUNT_SYNERGY_SYN2024 {"encrypted_value":"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","key_id":"3380204578043523366"}
+[debug] [2024-05-02T05:32:51.236Z] <<< [apiv2][status] PUT https://api.github.com/repos/HellenNzisa/synergy/actions/secrets/FIREBASE_SERVICE_ACCOUNT_SYNERGY_SYN2024 201
+[debug] [2024-05-02T05:32:51.237Z] <<< [apiv2][body] PUT https://api.github.com/repos/HellenNzisa/synergy/actions/secrets/FIREBASE_SERVICE_ACCOUNT_SYNERGY_SYN2024 {}
+[info] +  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_SYNERGY_SYN2024. 
+[info] i  You can manage your secrets at https://github.com/HellenNzisa/synergy/settings/secrets. 
+[info] 
+[info] 
+[info] +  Created workflow file C:\Users\hmute\OneDrive\Documents\Mobiledevelopment\synergy\.github/workflows/firebase-hosting-pull-request.yml 
+[info] 
+[info] +  Created workflow file C:\Users\hmute\OneDrive\Documents\Mobiledevelopment\synergy\.github/workflows/firebase-hosting-merge.yml 
+[info] 
+[info] i  Action required: Visit this URL to revoke authorization for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] i  Action required: Push any new workflow file(s) to your repo 
+[info] 
+=== Storage Setup
+[debug] [2024-05-02T05:35:49.410Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\hmute\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:261:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
